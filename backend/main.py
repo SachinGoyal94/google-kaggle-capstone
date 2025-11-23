@@ -16,6 +16,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/")
+def read_root():
+    return {"message": "Character AI Backend is running!", "docs_url": "/docs"}
+
+
 # --------------------------------------------------------
 # REGISTER
 # --------------------------------------------------------
